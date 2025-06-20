@@ -1,5 +1,6 @@
-# Fourier123
+# GenCompositor
 
-The webpage of our paper: ___Fourier123: One Image to High-Quality 3D Object Generation with Hybrid Fourier Score Distillation___.
+The webpage of our paper: ___GenCompositor: Generative Video Compositing with Diffusion Transformer___.
 
-Code is available at : https://github.com/Ysz2022/Fourier123
+Code is coming soon!
+We have finished organizing the code and are waiting for the approval process . . .
