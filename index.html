@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    Fourier123
+  </title>
+<!--  <link rel="icon" href="Fourier123.ico">-->
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-3"> Hybrid Fourier Score Distillation for Efficient One Image to 3D Object Generation </p>
+    <!-- publication -->
+    <p class="subtitle is-4"> Arxiv 2024 </p>
+    <!-- authors -->
+    <p class="title is-5 mt-2">
+      Anonymous authors
+    </p>
+    <!-- affiliations -->
+    <p class="subtitle is-5">
+      <sup>1</sup> Anonymous institution
+    </p>
+
+    <!-- other links -->
+    <div class="is-flex is-justify-content-center">
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://gencompositor.github.io/" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a>
+      </span>
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://gencompositor.github.io/" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code(coming soon) </span> </a>
+      </span>
+    </div>
+    
+  </div>
+
+  <!-- main container -->
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- abstract -->
+    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+    <p class="content is-size-6 has-text-left">
+      Video compositing serves as a crucial step in video creation and film production, bridging the gap between live-action footage and the final video production.
+      Traditionally, this process demands labor-intensive efforts.
+      Therefore, we aim to automate this process using a generative method, which we refer to as generative video compositing in this work.
+      Specifically, our task strives to seamlessly inject both identity and motion information of dynamic video elements into the target video in a user-controllable manner.
+      This allows users to effortlessly dictate the size, motion trajectory, and other attributes of the added dynamic elements in the final video.
+      To achieve this, we introduce a novel Diffusion Transformer (DiT) pipeline specifically designed for generative video compositing.
+      We develop a DiT-based background preservation branch to ensure content consistency in the video before and after editing.
+      Furthermore, to seamlessly integrate dynamic foreground elements and ensure their coordination with the environment, we have designed an innovative DiT fusion block.
+      This block merges conditions with self-attention, fully inheriting foreground information while harmonizing with the background, thereby providing a realistic and harmonious composition.
+      To train our model, we have curated a dataset comprising 27K video data samples.
+      This dataset includes complete dynamic elements and high-quality target videos.
+      Experimental results demonstrate that our proposed method achieves promising results in the generative video compositing task.
+    </p>
+    
+    <!-- results (videos) -->
+   
+<!--    <p class="title is-3 mt-5 has-text-centered"> Image-to-3D </p>-->
+<!--    <video muted autoplay loop> <source src="videos/demo.mp4" type="video/mp4"> </video>-->
+
+<!--    <p class="big">-->
+<!--    <br><br>-->
+<!--    </p>-->
+<!--    <p class="title is-3 mt-5 has-text-centered"> Comparison </p>-->
+<!--    <video muted autoplay loop> <source src="videos/comparison.mp4" type="video/mp4"> </video>-->
+
+    
+    <!-- citation -->
+  </div>
+
+
+  </section>
+</body>
+</html>
