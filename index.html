@@ -5,8 +5,8 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="Neural Video Fields Editing"/>
-  <meta property="og:description" content="Neural Video Fields Editing"/>
+  <meta property="og:title" content="GenCompositor: Generative Video Compositing with Diffusion Transformer"/>
+  <meta property="og:description" content="GenCompositor: Generative Video Compositing with Diffusion Transformer"/>
   <meta property="og:url" content="https://NVEdit.github.io/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/pipeline.png" />
@@ -64,7 +64,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="xtitle is-1 publication-title" style="font-size: 2.5rem">
-              Neural Video Fields Editing</h1>
+              GenCompositor: Generative Video Compositing with Diffusion Transformer</h1>
 <!--            <div class="is-size-5 publication-authors">-->
 <!--              ICCV 2023 Oral Presentation-->
 <!--              &lt;!&ndash; <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> &ndash;&gt;-->
@@ -75,7 +75,7 @@
               <span class="author-block">
                 <a href="https://ysz2022.github.io/" target="_blank">Shuzhou Yang</a><sup>1</sup></span>
                 <span class="author-block">
-                  <a href="https://xiaoyu258.github.io/" target="_blank">Xiaoyu Li</a><sup>2</sup></span>
+                  <a href="https://xiaoyu258.github.io/" target="_blank">Xiaoyu Li*</a><sup>2</sup></span>
                   <span class="author-block">
                     <a href="https://vinthony.github.io/" target="_blank">Xiaodong Cun</a><sup>3</sup>
                   </span>
@@ -95,7 +95,7 @@
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
                     <sup>1</sup> SECE, Peking University &nbsp;&nbsp;&nbsp;
-                    <sup>2</sup> ARC Lab, Tencent
+                    <sup>2</sup> ARC Lab, Tencent &nbsp;&nbsp;&nbsp;
                     <sup>3</sup> SCIT, Great Bay University</span>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> -->
                   </div>
@@ -154,7 +154,7 @@
 
 
 <section class="hero">
-  <p class="trdl">TL;DR: Editing long videos coherently via neural video fields.</p>
+  <p class="trdl">TL;DR: The first generative video compositing method realized with Diffusion Transformer.</p>
   <div class="is-max-desktop">
     <div class="marquee-wrapper">
         <div class="marquee-block">
@@ -167,7 +167,7 @@
                   type="video/mp4">
                 sorry, your browser does not support HTML5 Videos.
                 </video>
-                <p class="text-white"> <c> Turn it into a watercolor painting </c> </p>
+                <p class="text-white"> <c>  </c> </p>
               </div>
               <div class="marquee-item">
                 <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" class="lozad" autoplay muted loop playsinline height="100%">
@@ -175,7 +175,7 @@
                     type="video/mp4">
                   sorry, your browser does not support HTML5 Videos.
                   </video>
-                <p class="text-white"> <c>Turn it into a Monet style painting</c> </p>
+                <p class="text-white"> <c> </c> </p>
               </div>
               <div class="marquee-item">
                 <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
@@ -183,7 +183,7 @@
                   type="video/mp4">
                 sorry, your browser does not support HTML5 Videos.
                 </video>
-                <p class="text-white"> <c> Turn him into Obama </c> </p>
+                <p class="text-white"> <c>  </c> </p>
               </div>
               <div class="marquee-item">
                 <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
@@ -191,7 +191,7 @@
                     type="video/mp4">
                   sorry, your browser does not support HTML5 Videos.
                   </video>
-                <p class="text-white"> <c>Turn the wolf into a brown bear</c> </p>
+                <p class="text-white"> <c> </c> </p>
               </div>
               <div class="marquee-item">
                 <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
@@ -402,16 +402,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video compositing combines live-action footage to create final video production, serving as a crucial step in video creation and film production.
-            Traditionally, this process requires labor-intensive efforts. This paper aims to automate this process with generative models, which is referred to as generative video compositing.
-            Specifically, our task strives to adaptively inject both identity and motion information of dynamic video elements into the target video in a user-controllable manner.
-            This allows users to effortlessly dictate the size, motion trajectory, and other attributes of the dynamic elements added in the final video.
-            To address this new task, we designed a novel Diffusion Transformer (DiT) pipeline based on its intrinsic properties.
-            To maintain the consistency of target video before and after editing, we revised a light-weight DiT-based background preservation branch with masked token injection.
-            To faithfully and robustly inherit dynamic elements from other sources, we proposed a DiT fusion block with full self-attention, along with a simple yet effective foreground augmentation for training.
-            More importantly, to fuse background and foreground videos with inconsistent layouts, we developed a novel position embedding strategy, named Extended Rotary Position Embedding (ERoPE).
-            Finally, we curated a dataset comprising 61K sets of videos for this new task, called VideoComp. This data includes complete dynamic elements and high-quality target videos.
-            Experimental results demonstrate that our method effectively realizes generative video compositing, outperforming existing possible solutions.
+            Video compositing combines live-action footage to create video production, serving as a crucial technique in video creation and film production.
+            Traditional pipelines require intensive labor efforts and expert collaboration, resulting in lengthy production cycles and high manpower costs.
+            To address this issue, we automate this process with generative models, called generative video compositing.
+            This new task strives to adaptively inject identity and motion information of foreground video to the target video in an interactive manner, allowing users to customize the size, motion trajectory, and other attributes of the dynamic elements added in final video.
+            Specifically, we designed a novel Diffusion Transformer (DiT) pipeline based on its intrinsic properties.
+            To maintain consistency of the target video before and after editing, we revised a light-weight DiT-based background preservation branch with masked token injection.
+            As to inherit dynamic elements from other sources, a DiT fusion block is proposed using full self-attention, along with a simple yet effective foreground augmentation for training.
+            Besides, for fusing background and foreground videos with different layouts based on user control, we developed a novel position embedding, named Extended Rotary Position Embedding (ERoPE).
+            Finally, we curated a dataset comprising 61K sets of videos for our new task, called VideoComp. This data includes complete dynamic elements and high-quality target videos.
+            Experiments demonstrate that our method effectively realizes generative video compositing, outperforming existing possible solutions in fidelity and consistency.
         </div>
       </div>
     </div>
@@ -419,6 +419,14 @@
 </section>
 <!-- End paper abstract -->
 
+<style>
+  .figure-caption {
+    font-size: 1.2em;   /* 放大字体 */
+    font-weight: bold;  /* 加粗 */
+    text-align: center; /* 居中（可选） */
+    margin-top: 0.5em;  /* 调整与图片的间距 */
+  }
+</style>
 
 <!-- Paper abstract -->
 <section class="section hero">
@@ -426,12 +434,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <h2 class="title is-2">Pipeline</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="display: flex; flex-direction: column; align-items: center;">
           <img src="static/images/pipeline.png" />
+          <p class="figure-caption text-white">Fig.1(a)</p>
+          <img src="static/images/FusionBlock.png" style="width: 500px; height: auto;" />
+          <p class="figure-caption text-white">Fig.1(b)</p>  <!-- 应用自定义类 -->
         </div>
 	<p class="content has-text-justified">
-         <b>Left,  Video Fitting Stage</b>: we train a neural a video field to fit a given video for temporal priors.
-         <br/><br/><b>Right, Field Editing Stage</b>: The trained neural video field renders a frame, which is then edited by a pre-trained T2I model (e.g., Instruct-Pix2Pix+). We use it to optimize the trained field to impart editing effects.
+         <b>Fig.1(a)</b>: Workflow of GenCompositor, consisting of the control signal conversion (left), a background perservation branch, and a foreground generation mainstream.
+         <br/><br/><b>Fig.1(b)</b>: DiT fusion block, fusing layout-unaligned video condition with pure self-attention, combined with the proposed ERoPE. Receive masked background tokens.
         </p>
       </div>
     </div>
